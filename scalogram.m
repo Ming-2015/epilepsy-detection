@@ -4,9 +4,11 @@ warning off all;
 clc;
 
 %% Generate the plots here
-recordId = '072513';
+recordId = '042913';
 % generateScalogramDiscontinuous(recordId, 10000, 0);
 % generateScalogramDiscontinuous(recordId, 10000, 1);
 
-generateScalogramContinuous(recordId, 1, 40000, 0, 'eccentricity');
-generateScalogramContinuous(recordId, 1, 40000, 1, 'eccentricity');
+% This will load all the seizure occurrence timings into seizureTimes
+seizureTimes = loadSeizureTimes('seizureEventData.csv');
+generateScalogramContinuous(recordId, 1, 20000, 0, 'eccentricity',seizureTimes);
+generateScalogramContinuous(recordId, 1, 20000, 1, 'eccentricity',seizureTimes);
