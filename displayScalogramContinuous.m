@@ -4,7 +4,7 @@
 %   want to use all the samples available
 % useLeftEye: input 1 if you want to use left eye data, or 0 if you want to
 %   use right eye data
-function generateScalogramContinuous(recordId, sampleStart, sampleLength, useLeftEye, varName, seizureTimes)
+function displayScalogramContinuous(recordId, sampleStart, sampleLength, useLeftEye, varName, seizureTimes)
 %%	Load subject specific measurement file
 
 FName       =   recordId;
